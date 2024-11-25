@@ -27,7 +27,6 @@ func main() {
 	mux.HandleFunc("/admin/metrics", apiCfg.handlerMetrics)
 	mux.HandleFunc("POST /api/validate_chirp", apiCfg.handlerChirpsValidate)
 
-
 	srv := &http.Server{
 		Addr:    ":" + port,
 		Handler: mux,
